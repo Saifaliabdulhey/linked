@@ -1,0 +1,334 @@
+.grid-item {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #2f010100;
+    width: 500px;
+    height: 500px;
+    box-shadow: 0 0 1px 1px rgb(0, 0, 0);
+    transform: scale(1);
+    transition: all 0.3s;
+    margin: 20px;
+    border-radius:10px;
+
+    @media (max-width: 668px) {
+        width: 400px;
+     }
+    
+
+    &:hover {
+        cursor: pointer;
+        box-shadow: 0 0 5px 5px rgb(35, 2, 5);
+        button {
+            position: absolute;
+            padding: 15px 40px;
+            background: rgb(108, 2, 23);
+            box-shadow: 0 0 3px 3px;
+            color: #fff;
+            border: none;
+            z-index: 9999999;
+            border-radius: 10px;
+            cursor: pointer;
+        
+        }
+
+        .overlay {
+            position: absolute;
+            background-color: #0000007d;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h1 {
+            color: #fff;
+        }
+
+        img {
+            opacity: 0.3;
+        }
+    }
+    img {
+        position: absolute;
+        width: 490px;
+        top: 0;
+        @media (max-width: 668px) {
+            width: 400px;
+         }
+    }
+
+    h1{
+        transition: all 0.3s ease;
+        position: absolute;
+        color: rgb(0, 0, 0);
+        bottom: 30px;
+        z-index: 10000;
+
+    }
+
+    .overlay {
+        transition: all 0.3s ease;
+    }
+
+    button {
+        transition: all 0.3s ease;
+
+    }
+}
+
+.landingPage {
+    padding-bottom: 300px;
+}
+
+.grid {
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    flex-wrap: wrap;
+    padding-top:80px;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    padding-top:80px;
+    padding-bottom:80px;
+    
+    img {
+        width:250px;
+        border-radius: 50%;
+        margin-right: 30px;
+    }
+}
+
+
+.title {
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction: column;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    @media (max-width: 668px) {
+        display: none;
+     }
+
+    p {
+        font-size: 22px;
+        margin-top: 20px;
+    }
+
+    button {
+        border: none;
+        padding: 10px 70px;
+        margin: 20px 0;
+        border-radius: 20px;
+        font-size: 18px;
+        background:none;
+        border: 1px solid white;
+        color: white;
+        transition: all 0.3s;
+        &:hover {
+            background:rgb(255, 0, 64);
+            border: 1px solid white;
+            cursor: pointer;
+        }
+    }
+}
+
+.link {
+    transition: all 0.3s;
+    &:hover {
+        cursor: pointer;
+        z-index: 100000000;
+    }
+}
+
+.search-box {
+    width: 100%;
+    padding: 15px;
+    border-radius: 3px;
+    background:none;
+    margin: auto;
+    margin-top: 50px;
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    border: none;
+    box-shadow: 0 0 1px 1px rgb(0, 0, 0);
+    margin-bottom: 70px;
+
+    @media (max-width: 600px) {
+     margin-top: 230px;
+    }
+}
+
+.search_container {
+    position: relative;
+    display: flex;
+    width: 40%;
+    margin: auto;
+
+    img {
+        width: 30px;
+        position: absolute;
+        right:15px;
+        top: 60px;
+        @media (max-width: 600px) {
+            top: 240px;
+           }
+
+    }
+    @media (max-width: 668px) {
+        width: 80%;
+    }
+}
+
+
+.modal {
+    background: #060c217c;
+    margin: auto;
+    backdrop-filter: blur(40px);
+    border-radius: 2%;
+    outline: none;
+    box-shadow: 0 0 5px 5px rgb(241, 8, 58);
+    width: 80%;
+    height: 900px;
+    z-index: 10;
+
+}
+
+// }
+
+.ReactModalPortal .ReactModal__Overlay {
+    align-items: center;
+    justify-content:center;
+    display:flex;
+}
+
+.modal_container {
+    position: relative;
+}
+
+.ReactModalPortal .ReactModal__Overlay--after-open {
+    opacity: 1;
+}
+
+
+.ReactModalPortal .ReactModal__Overlay--before-close {
+    opacity: 0;
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.close {
+    background: none;
+    border: none;
+    margin: 10px;
+
+    img {
+        width: 30px;
+        filter: invert(100%);
+        transition: all 0.3s;
+        &:hover {
+            cursor: pointer;
+            transform:scale(1.2); ;
+        }
+       
+    }
+}
+
+.modal-content {
+    display: flex;
+    justify-content:center;
+    align-items:center;
+
+    @media (max-width: 668px) {
+        flex-direction: column;
+
+        img {
+            width: 100px;
+        }
+    }
+
+    .modal_img {
+        margin: 80px;
+        img {
+            width: 400px;
+        }
+    }
+
+
+    .modal_info {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        h1 {
+            color: #fff;
+            margin: 50px;
+            font-size: 42px;
+        }
+
+        h3 {
+            margin: 40px;
+            font-size: 22px;
+            color: #fff;
+        }
+
+
+        .contact_icons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img {
+                width: 80px;
+                margin: 20px;
+            }
+
+            li {
+                font-size: 24px;
+                color: #fff;
+                margin: 20px;
+            }
+        }
+    }
+}
+
+
+.location {
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    margin-top: 50px;
+    img {
+        width: 80px;
+        filter: invert(100%);
+    }
+}
+
+.head_img {
+    width: 100%;
+}
+.main_img {
+    transition: all 0.3s ease;
+    @media (max-width: 668px) {
+        font-size: large;
+        width: 90%;
+     }
+}
+.main_img:hover {
+transform: scale(1.4);
+z-index: 10000;
+margin-top: 100px;
+}
